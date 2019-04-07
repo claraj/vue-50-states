@@ -1,0 +1,19 @@
+{
+  "name": "fifty_states",
+  "version": "1.0.0",
+  "description": "Have you visited all 50 states in the US?",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "clara",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "sequelize": "^5.2.12"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.0.6"
+  }
+}
