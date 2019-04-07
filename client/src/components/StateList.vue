@@ -4,6 +4,9 @@
     <Summary 
       v-bind:total="totalVisited"
       v-bind:visitedAll="visitedAll">
+        <template name="allMessage">
+          You have visited all 50 states and the District of Columbia!
+        </template>
     </Summary>
 
     <div class="d-flex flex-wrap justify-content-around"> 

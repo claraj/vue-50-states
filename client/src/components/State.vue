@@ -1,5 +1,5 @@
 <template>
-  <div class="state-summary p-2">
+  <div class="state-summary p-2 rounded">
   
     <span class="m-2">{{ stateName }}</span>
     <p>

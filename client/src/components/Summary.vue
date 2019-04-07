@@ -3,7 +3,9 @@
   
     <h3>You have visited {{ total }} {{ statesPlural }} </h3>
 
-    <p id="visited-all" v-if="visitedAll">You have visited all the states and the District of Columbia!</p>
+    <p id="visited-all" v-if="visitedAll">
+        <slot v-slot:allMessage>default</slot>
+    </p>
 
   </div>
 </template>
