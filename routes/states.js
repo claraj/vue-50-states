@@ -1,10 +1,10 @@
 var express = require('express')
-var State = require('../models').State
+var States = require('../models').States
 
 var router = express.Router()
 
 router.get('/states', function(req, res, next){
-    State.findAll({order: ['name']})
+    States.findAll({order: ['name']})
         .then( states => {
             return res.json(states)
         })
@@ -12,7 +12,7 @@ router.get('/states', function(req, res, next){
 })
 
 router.get('/states/:name', function(req, res, next) {
-    State.findOne({where: {name: req.params.name}})
+    States.findOne({where: {name: req.params.name}})
         .then(state => {
             if (state) { 
                 return res.json(state)
@@ -24,7 +24,7 @@ router.get('/states/:name', function(req, res, next) {
 })
 
 router.patch('/state/:name', function(req, res, next){
-    State.update({ visited: req.body.visited }, { where: {                    
+    States.update({ visited: req.body.visited }, { where: {                    
                 name: req.params.name
             }
         })
@@ -37,6 +37,5 @@ router.patch('/state/:name', function(req, res, next){
         })
         .catch( err => next.err() )
 })
-
 
 module.exports = router
