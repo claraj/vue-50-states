@@ -1,17 +1,37 @@
 ## 50 States 
 
-For development,
+For development, run server with 
 
 `npm install`
 `npm start`
 
-From client directory
+From client directory, run dev server for client
 
 `npm install`
 `npm run serve`
 
 App at http://127.0.0.1:8080
 
+
+### sequelite command line 
+
+- start project 
+`sequelize init` 
+
+- Create models 
+`sequelize model:generate --name States --attributes name:string,visited:boolean,lat:float,lon:float,zoom:integer`
+
+Add --force to overwrite model
+
+- Migrate 
+`sequelize db:migrate`
+
+- run seeds 
+`sequelize db:seed:all`
+- remove all seeds 
+`sequelize db:seed:undo:all`
+
+http://docs.sequelizejs.com/manual/migrations.html#creating-first-model--and-migration-
 
 ### Resources 
 
