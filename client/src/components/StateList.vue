@@ -14,8 +14,6 @@
       </div>
     </div> 
 
-  <div id="icon-credit" class="text-right m-2"><a href="https://icons8.com/icon/43632/map">Map icon by Icons8</a></div>
-
   </div>
 </template>
 

@@ -45,7 +45,4 @@ export default {
     height: 2em;
   }
 
-  #icon-credit {
-    text-emphasis: italic;
-  }
 </style>
