@@ -6,11 +6,13 @@ https://fifty-states-visited.herokuapp.com/#/
 For development, run server with 
 
 `npm install`
+
 `npm start`
 
 From client directory, run dev server for client
 
 `npm install`
+
 `npm run serve`
 
 App at http://127.0.0.1:8080
