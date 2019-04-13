@@ -8,7 +8,7 @@
 
     <p>
       <router-link :to="{ name: 'detail', params: { state: stateName } }">
-        <img class="map-icon" src="../assets/icons8-map-96.png">
+        <img class="map-icon" src="@/assets/icons8-map.png">
       </router-link>
     </p>
 
