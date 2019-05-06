@@ -321,14 +321,14 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
-    var statesVisited = states.map(function(s) { 
+    var statesDates = states.map(function(s) { 
       s.visited = false; 
       s.createdAt = new Date(), 
       s.updatedAt = new Date()
       return s 
     })
     
-    return queryInterface.bulkInsert('States', statesVisited, {})
+    return queryInterface.bulkInsert('States', statesDates, {})
   },
 
   down: (queryInterface, Sequelize) => {
@@ -336,8 +336,7 @@ module.exports = {
       Add reverting commands here.
       Return a promise to correctly handle asynchronicity.
     */
-      Example:
       return queryInterface.bulkDelete('States', null, {});
-    
+
   }
 };
