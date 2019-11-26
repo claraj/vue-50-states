@@ -8,7 +8,7 @@ router.get('/states', function(req, res, next){
         .then( states => {
             return res.json(states)
         })
-        .catch( err => next.err() )
+        .catch( err => next(err) )
 })
 
 router.get('/states/:name', function(req, res, next) {
@@ -20,7 +20,7 @@ router.get('/states/:name', function(req, res, next) {
                 return res.status(404).send()
             }
         })
-        .catch( err => next.err() )
+        .catch( err => next(err) )
 })
 
 router.patch('/state/:name', function(req, res, next){
@@ -35,7 +35,7 @@ router.patch('/state/:name', function(req, res, next){
                 return res.status(404).send()
             }
         })
-        .catch( err => next.err() )
+        .catch( err => next(err) )
 })
 
 module.exports = router
