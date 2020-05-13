@@ -49,7 +49,10 @@ export default {
         this.zoom = data.zoom 
         this.center = [data.lat, data.lon] 
         // fly to new center coordinates to center on state
-        this.$refs.stateMap.mapObject.flyTo(this.center, this.zoom)
+        this.$nextTick( () => {
+          this.$refs.stateMap.mapObject.flyTo(this.center, this.zoom)
+        })
+        
       }).catch( err => console.error(err)) 
     }
   }
